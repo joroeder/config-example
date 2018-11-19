@@ -12,6 +12,10 @@ __license__ = "GPLv3"
 import os
 import config as cfg
 
+print("Gefundene ini-Dateien:")
+for filename in cfg.get_ini_filenames():
+    print(filename)
+
 for n in range(3):
     v = cfg.get('values', 'value{0}'.format(n + 1))
     print(v, type(v))
